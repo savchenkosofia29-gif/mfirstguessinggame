@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Higher or Lower</h1>
+
+<input id="guess" type="number">
+<button onclick="guess()">Guess</button>
+
+<p id="result">Guess a number!</p>
+
+<script>
+let number = Math.floor(Math.random() * 100) + 1;
+
+function guess() {
+  let x = Number(document.getElementById("guess").value);
+
+  if (x < number)
+    document.getElementById("result").textContent = "Higher!";
+  else if (x > number)
+    document.getElementById("result").textContent = "Lower!";
+  else
+    document.getElementById("result").textContent = "YOU GOT IT! 🎉";
+}
+</script>
+
+</body>
+</html>
+
